@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    scroll-behavior: smooth;
+    position: relative;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+}
+body.lock {
+    overflow: hidden;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+.header::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #172242;
+    z-index: 2;
+}
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header__logo {
+    position: relative;
+    z-index: 3;
+}
+.logo {
+    animation: logo infinite 10s ease 1s;
+}
+@keyframes logo {
+    50% {transform:rotateY(180deg);}
+}
+.header__burger {
+    display: none;
+}
+.header__list {
+    display: flex;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+.header__list li {
+    margin-left: 20px;
+    position: relative;
+}
+nav a {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+nav a::before {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: rgb(188, 184, 200);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+}
+nav a:hover::before {
+    width: 100%;
+}
+
+/* --------------------main------------------------ */
+main {
+    padding-top: 150px;
+    flex: 1 1 auto;
+}
+.directions__list {
+    margin: 15px 0 15px 50px;
+    line-height: 34px;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+} 
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+} 
+h4 {
+    font-size: 28px;
+    text-align: center;
+    font-style: italic;
+}
+
+.performance {
+    margin: 50px 0;
+}
+.performance__flexbox {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.performance__foto {
+    width: 45%;
+}
+.performance__foto img {
+    width: 100%;
+    border-radius: 50%;
+    /* filter: drop-shadow(2px 4px 6px black); */
+}
+.performance__content {
+    width: 55%;
+    padding: 30px 40px;
+    /* filter: drop-shadow(2px 4px 6px #23366c); */
+    font-size: 25px;
+}
+.clients {
+    text-align: center;
+}
+.clients__case {
+    display: flex;
+    margin: 45px 0;
+}
+.clients__case__item {
+    width: 33%;
+    font-size: 18px;
+    line-height: 29px;
+    padding: 0 10px;
+}
+.clients__button {
+    display: inline-block;
+    background-color: #172242;
+    width: 280px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.clients__button:hover {
+    background-color: #2c458f;
+}
+.formWrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(38, 35, 80, .8);
+    z-index: 11;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+.callback {
+    background-color:#fff;
+    width: 50%;
+    /* border: 4px solid rgba(0, 204, 255); */
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+.callback input, #form__btn {
+    width: 75%;
+    box-sizing: border-box;
+    margin-top: 25px;
+    font-size: 22px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #b5b9bd;
+    padding-left: 10px;
+}
+h5 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#politics {
+    width: auto;
+    margin-right: 7px;
+}
+#form__btn {
+    display: inline-block;
+    background-color: #242289;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+#form__btn:hover {
+    background-color: #2c458f;
+}
+.btn__close {
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+    width: auto;
+}
+#price {
+    margin-top: 50px;
+}
+.footer {
+   width: 100%;
+   background-color: #172242;
+   color: #fff;  
+   margin-top: 50px;
+}
+.footer__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    flex-wrap: wrap;
+}
+.footer p {
+    padding-left: 15px;
+}
+.footer a {
+    color: #fff;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer__img {
+    display: none;
+    width: 30px;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+}
+.whatsapp {
+    width: 100%; 
+    animation: whatsapp infinite 12s ease 3s;
+}
+@keyframes whatsapp {
+    35% {transform:rotate(75deg);}
+    50% {transform:scale(1.2);}
+    65% {transform:rotate(-20deg);}
+    100% {transform:rotate(0);}
+}
+/* ------------bankrotstvo---------------------------- */
+.italic {
+    font-style: italic;
+}
+.information__box {
+    display: flex;
+    margin-top: 40px;
+}
+.information__box img {
+    width: 200px;
+}
+.information__box__img {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.information__box__text {
+    background-color: #f7f7f7;
+}
+.bankrotstvo__blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.bankrotstvo__blocks__cell {
+    width: 47%;
+    box-sizing: border-box;
+    border: 1px black solid;
+    box-shadow: 10px 5px 5px black;
+    margin-bottom: 40px;
+    padding: 20px 10px 0 10px;
+}
+.bankrotstvo__blocks__cell__list {
+    margin: 20px 0 20px 25px;
+}
+.bankrotstvo__blocks__cell__list li {
+    margin-bottom: 10px;
+}
+.special__parag {
+    font-size: 28px;
+    font-weight: 500;
+    font-style: italic;
+}
+/*----------------------------------politica-------------------------- */
+.politic {
+    font-size: 20px;
+    
+    margin-top: 30px;
+}
+.politic__head {
+    margin-bottom: 45px;
+}
+.politic p {
+    margin-bottom: 20px;
+    line-height: 28px;
+}
+/* -------------------------------contacts------------------------------- */
+
+#contacts {
+    margin-top: 0;
+}
+.information {
+    margin-top: 50px;
+}
+.information p {
+    margin: 20px 0;
+}
+.information__list {
+    font-style: italic;
+    font-size: 22px;
+    line-height: 34px;
+    margin: 0 0 50px 50px;
+}
+
+/* -----------------------------@media-------------------------------- */
+
+
+@media screen and (max-width:767px) {
+
+    .header__body {
+        justify-content: space-between;
+        height: auto;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;        
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top:9px;
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__menu {
+        position: fixed;
+        top: -110%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(30 115 137);
+        padding-top: 70px;
+        transition: all 0.5s ease;
+    }
+    .header__menu.active {
+        top:0;
+    }
+    .header__logo img {
+        width: 55px;
+    }
+    .header__list {
+        display: block;
+    }
+    .header__list li {
+        margin-bottom: 20px;
+    }
+    nav a:hover::before {
+        width: 0;
+    }
+    main {
+        padding-top: 80px;
+    }
+    .performance {
+        margin: 30px 0;
+    }
+    .performance__flexbox {
+        flex-direction: column;
+    }
+    .performance__foto {
+        width: 65%;
+    }
+    .performance__content {
+        width: 85%;
+        text-align: center;
+        font-size: 22px;
+        padding: 30px 0;
+    }
+    .clients__case {
+        flex-direction: column;
+        align-items: center;
+    }
+    .clients__case__item {
+        width: 90%;
+        border-bottom: 1px solid blueviolet;
+        margin-bottom: 20px;
+    }
+    .callback {
+        width: 90%;
+        padding: 17px;
+    }
+    .callback input {
+        width: 95%;
+    }
+    #form__btn {
+        width: 95%;
+    }
+    .btn__close {
+        top: 0;
+        right: 4px;
+    }
+    .bankrotstvo__blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bankrotstvo__blocks__cell {
+        width: 96%;
+    }
+    .information__box {
+        flex-direction: column;
+    }
+    .footer {
+        height: 55px;
+        bottom: -80px;
+    }
+    .footer__img {
+        display: block;
+    }
+   
+}
+
+@media screen and (max-width:521px) {
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .footer__body {
+        justify-content: center;
+        height: auto;
+    }
+}
+@media screen and (max-width:402px) {
+    .politic__head {
+        font-size: 29px;
+    }
+}    
