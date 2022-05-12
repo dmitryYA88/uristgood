@@ -141,7 +141,7 @@ h4 {
 .performance__foto img {
     width: 100%;
     border-radius: 50%;
-    /* filter: drop-shadow(2px 4px 6px black); */
+    filter: drop-shadow(2px 4px 6px black);
 }
 .performance__content {
     width: 55%;
@@ -482,6 +482,9 @@ h5 {
     }
     .bankrotstvo__blocks__cell {
         width: 96%;
+    }
+    .information__list {
+        margin-left: 25px;
     }
     .information__box {
         flex-direction: column;
